@@ -21,8 +21,7 @@ public class Train extends Transport {
     }
 
     @Override
-    public void printInfo() {
-        super.printInfo();
-        System.out.println("Навзва потягу: " + getName() + ".");
+    public String getInfo() {
+        return super.getInfo() + "\nНавзва потягу: " + getName() + ".";
     }
 }

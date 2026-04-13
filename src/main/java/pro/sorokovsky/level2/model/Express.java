@@ -23,8 +23,7 @@ public class Express extends Train {
     }
 
     @Override
-    public void printInfo() {
-        super.printInfo();
-        System.out.println("Марка експресу: " + getMark());
+    public String getInfo() {
+        return super.getInfo() + "\nМарка експресу: " + getMark();
     }
 }

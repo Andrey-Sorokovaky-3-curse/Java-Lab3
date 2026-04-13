@@ -27,7 +27,7 @@ public abstract class Transport {
         return a / b;
     }
 
-    public void printInfo() {
-        System.out.println("Тип транспорту: " + getType() + '.');
+    public String getInfo() {
+       return "Тип транспорту: " + getType() + '.';
     }
 }

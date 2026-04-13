@@ -39,6 +39,7 @@ public class CreateCarFrame extends JFrame {
             final var maxFull = Long.parseLong(inputField.getText());
             error.setText("");
             Transports.transports.add(new Car(maxFull));
+            dispose();
         } catch (ValidationException exception) {
             error.setText(exception.getMessage());
             inputField.requestFocus();

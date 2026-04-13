@@ -23,8 +23,7 @@ public class Car extends Transport{
     }
 
     @Override
-    public void printInfo() {
-        super.printInfo();
-        System.out.println("Розмір баку: " + getMaxFull() + "л.");
+    public String getInfo() {
+        return super.getInfo() + "\nРозмір баку: " + getMaxFull() + "л.";
     }
 }
