@@ -1,4 +1,4 @@
-package pro.sorokovsky.level2;
+package pro.sorokovsky.level2.model;
 
 import pro.sorokovsky.common.validation.ValidationException;
 
