@@ -1,29 +1,23 @@
 package pro.sorokovsky.level1;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Level1Frame extends JFrame {
-    private final JPanel panel = new JPanel();
-
-    public Level1Frame() {
-        basicSetup();
-        addTextField();
-        addSetButton();
-        add(panel);
-    }
-
-    private void basicSetup() {
+    public Level1Frame() throws HeadlessException {
         setTitle("Рівень 1");
         setSize(800, 600);
-    }
-
-    private void addTextField() {
-        final var textField = new JTextField();
-        panel.add(textField);
-    }
-
-    private void addSetButton() {
-        final var button = new JButton("Set");
-        panel.add(button);
+        setLayout(new FlowLayout());
+        final var textField = new JTextField(20);
+        final var label = new JLabel("Мітка");
+        final var setButton = new JButton("Set");
+        final var exitButton = new JButton("Exit");
+        setButton.addActionListener(_ -> label.setText(textField.getText()));
+        exitButton.addActionListener(_ -> dispose());
+        add(new JLabel("Введіть текст: "));
+        add(textField);
+        add(label);
+        add(setButton);
+        add(exitButton);
     }
 }
