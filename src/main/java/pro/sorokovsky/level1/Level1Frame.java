@@ -8,6 +8,7 @@ public class Level1Frame extends JFrame {
         setTitle("Рівень 1");
         setSize(800, 600);
         setLayout(new FlowLayout());
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         final var textField = new JTextField(20);
         final var label = new JLabel("Мітка");
         final var setButton = new JButton("Set");
