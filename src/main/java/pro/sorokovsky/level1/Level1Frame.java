@@ -14,7 +14,6 @@ public class Level1Frame extends JFrame {
 
     private void basicSetup() {
         setTitle("Рівень 1");
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(800, 600);
     }
 
