@@ -22,4 +22,9 @@ public class SetupHelper {
         menuBar.add(transportMenu);
         frame.setJMenuBar(menuBar);
     }
+
+    public static void setCreatingArrayMenu(JFrame frame, JMenuBar menuBar) {
+        final var arrayMenu = new JMenu("Створити масив");
+
+    }
 }
