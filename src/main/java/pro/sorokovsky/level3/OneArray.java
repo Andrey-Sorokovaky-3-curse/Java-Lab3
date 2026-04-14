@@ -1,5 +1,8 @@
 package pro.sorokovsky.level3;
 
+import pro.sorokovsky.common.validation.NotPositiveNumberException;
+import pro.sorokovsky.common.validation.ValidationException;
+
 import java.util.Arrays;
 import java.util.random.RandomGenerator;
 
@@ -16,8 +19,10 @@ public class OneArray {
     /**
      * Створює новий одновимірний масив
      * @param count кількість елементів, має бути понад 0.
+     * @throws ValidationException якщо від'ємний розмір.
      */
-    public OneArray(int count) {
+    public OneArray(int count) throws ValidationException {
+        if (count < 0) throw new NotPositiveNumberException("розмір масиву");
         array = new int[count];
         this.count = count;
     }
@@ -52,5 +57,19 @@ public class OneArray {
      */
     public void sort() {
         Arrays.sort(array);
+    }
+
+    /**
+     * Перетворює двовимірний масив у рядкове представлення.
+     *
+     * @return Рядкове представлення
+     */
+    @Override
+    public String toString() {
+        final var builder = new StringBuilder();
+        for (int i = 0; i < count; i++) {
+                builder.append("%3d ".formatted(array[i]));
+        }
+        return builder.toString();
     }
 }
